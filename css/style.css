@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+
+}
+
+/*------------------------- Heahder -------------------------*/
+header {
+    background-color: #1B1A17;
+    position: fixed;
+    top: 0;
+    margin-left: -8px;
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+}
+
+
+header h1{
+    font-weight: bolder;
+    font-family: 'Contrail One', cursive;
+    color: aliceblue;
+    float: left;
+}
+
+
+header nav {
+    float: right;
+    padding: 0 30px;
+    
+    
+}
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 35px;
+
+}
+
+header nav ul li a{
+text-decoration: none;
+color : #F0E3CA;
+
+}
+
+
+/*------------------------- Body -------------------------*/
+body{
+    font-family: Georgia;
+    background-color: #F0E3CA;
+}
+
+body main img{
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+}
+
