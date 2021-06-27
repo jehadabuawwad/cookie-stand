@@ -8,7 +8,6 @@ header {
     background-color: #1B1A17;
     position: fixed;
     top: 0;
-    margin-left: -8px;
     width: 100%;
     padding: 10px;
     height: 100px;
@@ -20,14 +19,17 @@ header h1{
     font-family: 'Contrail One', cursive;
     color: aliceblue;
     float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 35px;
+
 }
 
 
 header nav {
     float: right;
     padding: 0 30px;
-    
-    
+    margin-top: 20px;
 }
 
 
@@ -49,11 +51,54 @@ color : #F0E3CA;
 body{
     font-family: Georgia;
     background-color: #F0E3CA;
+    position: relative;
 }
 
 body main img{
+    
+    display: block;
     background-size: cover;
+    width: 75%;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*------------------------- Articles -------------------------*/
+
+#Informations{
+    background-color: #FF8303;
+    background-size: cover;
+    margin-top: 100px;
     width: 100%;
-    height: 450px;
+    padding: 10px;
+    height: 300px;
+}
+
+
+#LocationInformations{
+    float: right;
+    margin: 0 10px;
+}
+
+#LocationInformation h1{
+     text-align: left;
+     font-weight: bold;
+     font-size: 20px;
+
+}
+
+
+#map{
+
+    position: relative;
+    text-align:right;
+    margin-top: -40px;
+
+
+
 }
 
