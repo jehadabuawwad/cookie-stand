@@ -51,29 +51,67 @@ color : #F0E3CA;
 
 }
 
-/*-------------------------------------------------- Index --------------------------------------------------*/
+/*-------------------------------------------------- Index File--------------------------------------------------*/
 
 /*------------------------- Body -------------------------*/
 body{
     font-family: Georgia;
     background-color: #F0E3CA;
+    position: static;
+}
+
+
+/*-------------------------------------------------- Main --------------------------------------------------*/
+/*------------------------- Introduction PART -------------------------*/
+#Introduction{
+    margin-top: 50px;
+    display: inline-block;
     position: relative;
 }
 
-body main img{
+#Introduction img{
+    margin-top: 10px; 
+    margin-left: 100px;
+    width: 550px;
+    height: 300;
+    border-radius: 15px;
     
-    display: block;
-    background-size: cover;
-    width: 75%;
-    height: 300px;
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
+#Introduction h1{
+    margin-top: 90px;
+    margin-left: 100px;
+    font-family: 'Contrail One', cursive;
+    font-size: 35px;
+}
+#Introduction p{
+    font-family: Georgia;
+    margin-left: 100px;
+    font-size: 25px;
+    
+}
 
+/*------------------------- Products PART -------------------------*/
+#Products{
+    display: block;
+    
+}
+#Products h1{
+    position: absolute;
+    font-family: 'Contrail One', cursive;
+    font-size: 55px;
+    top:420px;
+    left: 1420px;
+}
 
-/*------------------------- Articles -------------------------*/
+.Pictures{
+    position: absolute;
+    top:150px;
+    left: 800px;
+    border-radius: 3px;
+}
+
+/*-------------------------------------------------- Articles --------------------------------------------------*/
 
 #Informations{
     background-color: #FF8303;
@@ -85,8 +123,6 @@ body main img{
 }
 
 
-
-/*------------------------- Contact Information -------------------------*/
 #ContactCard h1{
     font-size: 30px;
     font-family: 'Contrail One', cursive;
@@ -159,9 +195,6 @@ body main img{
 
 
 
-
-
-
 /*-------------------------------------------------- Sales --------------------------------------------------*/
 
 
@@ -183,14 +216,4 @@ tr{
 td{
   border-right: solid 1px black;  
   text-align: center;
-}
-td:last-child{
-
-    
-}
-
-#headelements th{
-
-    
-    
 }
