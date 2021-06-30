@@ -203,7 +203,7 @@ table{
 border: solid 1px black;
 font-size: 25px;
 margin-top: 10px;
-margin-left: 10px;
+margin-left: 50px;
 }
 th{
 font-weight: Bold;
@@ -216,4 +216,25 @@ tr{
 td{
   border-right: solid 1px black;  
   text-align: center;
+}
+
+fieldset {
+    border: solid black 1px;
+    display: block;
+    margin: 50px 50px 50px 50px ;
+    font-size: 20px;
+    padding: 10px 20px 20px 50px;    
+
+}
+
+#fieldset label {
+    
+
+}
+
+#fieldset input {
+    
+}
+#fieldset button {
+    
 }

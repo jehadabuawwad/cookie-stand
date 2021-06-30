@@ -25,6 +25,26 @@
 <body>
 
     <main>
+
+        <form id=form>
+            <fieldset>
+                <legend>Enter New Location Informations</legend>
+                <label for="locationEntry">Location Name</label>
+                <input type="text" id="locationEntry">
+
+                <label for="minCustomer"> Minumum Customer Per Hour</label>
+                <input type="number" id="minCustomer">
+
+                <label for="maxCustomer">Maximum Customer Per Hour</label>
+                <input type="number" id="maxCustomer">
+
+                <label for="avgCookies">Avarage Cookies Sold Per Hour</label>
+                <input type="text" id="avgCookies">
+
+                <input type="submit" value="submit">
+            </fieldset>
+        </form>
+
         <div id="statistic">
             <table id="theSales"></table>
         </div>
