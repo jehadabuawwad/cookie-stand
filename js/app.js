@@ -282,7 +282,6 @@ function Market(locationName, minCustomers, maxCustomers, averageCookies) {
             let data = document.createElement('td');
             dataRow.appendChild(data);
             data.textContent = this.cookiesPerHour[i];
-
         }
 
         let dailyTotal = document.createElement('td');
@@ -295,8 +294,36 @@ function Market(locationName, minCustomers, maxCustomers, averageCookies) {
 
 };
 
+/*----------------------------------------Form CREATING PART ----------------------------------------  */
 
-/*-------------------------HEADER AND FOOTER CREATING PART -------------------------  */
+
+let form = document.getElementById('form');
+form.addEventListener('submit', formHandler);
+
+function formHandler(event) {
+    event.preventDefault();
+    let newLocationName = event.target.locationEntry.value;
+    let newMinCustomers = event.target.minCustomer.value;
+    let newMaxCustomers = event.target.maxCustomer.value;
+    let newAverageCookies = event.target.avgCookies.value;
+
+    // newMinCustomers = Number(newMinCustomers);
+    // newMaxCustomers = Number(newMaxCustomers);
+    newAverageCookies = Number(newAverageCookies);
+
+    newLocation = new Market(newLocationName, newMinCustomers, newMaxCustomers, newAverageCookies);
+    storedCreatedObj[storedCreatedObj.length - 1].calacCustomerPerHour();
+    storedCreatedObj[storedCreatedObj.length - 1].calcCookiesPerHour();
+    storedCreatedObj[storedCreatedObj.length - 1].render();
+    storedCreatedObj[storedCreatedObj.length - 1].footerMake();
+
+
+};
+
+/*----------------------------------------HEADER AND FOOTER CREATING PART ----------------------------------------  */
+
+
+
 let perant = document.getElementById("theSales");
 console.log(perant);
 
@@ -321,43 +348,46 @@ function headerMake() {
 };
 
 
-
-function footerMake(){
-    let footRow=document.createElement('tr');
+Market.prototype.footerMake = function () {
+    let footRow = document.createElement('tr');
     perant.appendChild(footRow);
 
     let firstFoot = document.createElement('th');
     footRow.appendChild(firstFoot);
-    firstFoot.textContent="Totals"; 
+    firstFoot.textContent = "Totals";
 
-    let allTotals =0;
+    let allTotals = 0;
 
     for (let i = 0; i < workingHours.length; i++) {
-        let totalEachHour=0;
+        let totalEachHour = 0;
         for (let j = 0; j < storedCreatedObj.length; j++) {
-            totalEachHour+=storedCreatedObj[j].cookiesPerHour[i];
+            totalEachHour += storedCreatedObj[j].cookiesPerHour[i];
         }
-        allTotals+=totalEachHour;
-        let footData=document.createElement('td');
+        allTotals += totalEachHour;
+        let footData = document.createElement('td');
         footRow.appendChild(footData);
-        footData.textContent=totalEachHour;
+        footData.textContent = totalEachHour;
     }
-    let totalOfTotal= document.createElement('th');
+    let totalOfTotal = document.createElement('th');
     footRow.appendChild(totalOfTotal);
-    totalOfTotal.textContent=allTotals;
-    
+    totalOfTotal.textContent = allTotals;
+
 };
 
 
-/*-------------------------INVOKING PART -------------------------  */
+
+/*--------------------------------------------------INVOKING PART --------------------------------------------------  */
+
+
 headerMake();
 
 console.log(storedCreatedObj);
-let Location01 = new Market('Seattle', 23, 65, 6.3)
-let Location02 = new Market('Tokyo', 3, 24, 1.2)
-let Location03 = new Market('Dubai', 11, 38, 3.7)
-let Location04 = new Market('Paris', 20, 38, 2.3);
-let Location05 = new Market('Lima', 2, 16, 4.6);
+
+Location01 = new Market('Seattle', 23, 65, 6.3)
+Location02 = new Market('Tokyo', 3, 24, 1.2)
+Location03 = new Market('Dubai', 11, 38, 3.7)
+Location04 = new Market('Paris', 20, 38, 2.3);
+Location05 = new Market('Lima', 2, 16, 4.6);
 
 for (let i = 0; i < storedCreatedObj.length; i++) {
     storedCreatedObj[i].calacCustomerPerHour();
@@ -366,4 +396,4 @@ for (let i = 0; i < storedCreatedObj.length; i++) {
 }
 
 
-footerMake();
+
