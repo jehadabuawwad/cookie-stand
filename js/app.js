@@ -1,5 +1,5 @@
 
-
+//  "use strict"
 /*-------------------------------------------------- PART A : Literal object --------------------------------------------------*/
 
 // let Seattle = {
@@ -264,14 +264,14 @@ function Market(locationName, minCustomers, maxCustomers, averageCookies) {
 
     this.calcCookiesPerHour = function () {
         for (let i = 0; i < workingHours.length; i++) {
-            this.cookiesPerHour.push(Math.floor(this.averageCookies * this.customerPerHour[i]));
+            this.cookiesPerHour.push(Math.ceil(this.averageCookies * this.customerPerHour[i]));
             this.sumOfCookiesPerDay += this.cookiesPerHour[i];
         };
 
     };
-
+    let dataRow = document.createElement('tr');
     this.render = function () {
-        let dataRow = document.createElement('tr')
+
         perant.appendChild(dataRow);
 
         let nameOfLocation = document.createElement('th');
@@ -292,31 +292,6 @@ function Market(locationName, minCustomers, maxCustomers, averageCookies) {
 
     storedCreatedObj.push(this);
 
-};
-
-/*----------------------------------------Form CREATING PART ----------------------------------------  */
-
-
-let form = document.getElementById('form');
-form.addEventListener('submit', formHandler);
-
-function formHandler(event) {
-    event.preventDefault();
-    let newLocationName = event.target.locationEntry.value;
-    let newMinCustomers = event.target.minCustomer.value;
-    let newMaxCustomers = event.target.maxCustomer.value;
-    let newAverageCookies = event.target.avgCookies.value;
-
-    // newMinCustomers = Number(newMinCustomers);
-    // newMaxCustomers = Number(newMaxCustomers);
-    newAverageCookies = Number(newAverageCookies);
-
-    newLocation = new Market(newLocationName, newMinCustomers, newMaxCustomers, newAverageCookies);
-    storedCreatedObj[storedCreatedObj.length - 1].calacCustomerPerHour();
-    storedCreatedObj[storedCreatedObj.length - 1].calcCookiesPerHour();
-    storedCreatedObj[storedCreatedObj.length - 1].render();
-    storedCreatedObj[storedCreatedObj.length - 1].footerMake();
-
 
 };
 
@@ -325,7 +300,7 @@ function formHandler(event) {
 
 
 let perant = document.getElementById("theSales");
-console.log(perant);
+
 
 function headerMake() {
     let rowHeader = document.createElement('tr');
@@ -347,8 +322,7 @@ function headerMake() {
 
 };
 
-
-Market.prototype.footerMake = function () {
+function footerMake() {
     let footRow = document.createElement('tr');
     perant.appendChild(footRow);
 
@@ -367,6 +341,7 @@ Market.prototype.footerMake = function () {
         let footData = document.createElement('td');
         footRow.appendChild(footData);
         footData.textContent = totalEachHour;
+
     }
     let totalOfTotal = document.createElement('th');
     footRow.appendChild(totalOfTotal);
@@ -376,10 +351,46 @@ Market.prototype.footerMake = function () {
 
 
 
+headerMake();
+/*----------------------------------------Form CREATING PART ----------------------------------------  */
+
+
+let form = document.getElementById('form');
+form.addEventListener('submit', formHandler);
+
+function formHandler(event) {
+    event.preventDefault();
+    let newLocationName = event.target.locationEntry.value;
+    let newMinCustomers = event.target.minCustomer.value;
+    let newMaxCustomers = event.target.maxCustomer.value;
+    let newAverageCookies = event.target.avgCookies.value;
+
+    newMinCustomers = parseInt(newMinCustomers);
+    newMaxCustomers = parseInt(newMaxCustomers);
+    newAverageCookies = parseFloat(newAverageCookies);
+
+    newLocation = new Market(newLocationName, newMinCustomers, newMaxCustomers, newAverageCookies);
+
+    storedCreatedObj[storedCreatedObj.length - 1].calacCustomerPerHour();
+    storedCreatedObj[storedCreatedObj.length - 1].calcCookiesPerHour();
+    storedCreatedObj[storedCreatedObj.length - 1].render();
+    let deleted = perant.rows.length-2;
+    if (deleted>=1) {
+        
+        console.log(deleted);
+        perant.deleteRow(deleted);
+       
+    }
+    footerMake();
+};
+
 /*--------------------------------------------------INVOKING PART --------------------------------------------------  */
 
 
-headerMake();
+
+
+
+
 
 console.log(storedCreatedObj);
 
@@ -389,11 +400,13 @@ Location03 = new Market('Dubai', 11, 38, 3.7)
 Location04 = new Market('Paris', 20, 38, 2.3);
 Location05 = new Market('Lima', 2, 16, 4.6);
 
+
 for (let i = 0; i < storedCreatedObj.length; i++) {
     storedCreatedObj[i].calacCustomerPerHour();
     storedCreatedObj[i].calcCookiesPerHour();
     storedCreatedObj[i].render();
+    
 }
-
+footerMake();
 
 
