@@ -1,14 +1,13 @@
-*{
+* {
     box-sizing: border-box;
-
 }
-
-
 
 
 /*-------------------------------------------------- ALL PAGES --------------------------------------------------*/
 
+
 /*------------------------- Header -------------------------*/
+
 header {
     background-color: #1B1A17;
     position: relative;
@@ -18,8 +17,7 @@ header {
     height: 100px;
 }
 
-
-header h1{
+header h1 {
     font-weight: bolder;
     font-family: 'Contrail One', cursive;
     color: aliceblue;
@@ -27,9 +25,7 @@ header h1{
     margin-top: 25px;
     margin-left: 10px;
     font-size: 35px;
-
 }
-
 
 header nav {
     float: right;
@@ -37,24 +33,24 @@ header nav {
     margin-top: 20px;
 }
 
-
-header nav ul li{
+header nav ul li {
     display: inline-block;
     padding: 0 20px;
     font-size: 35px;
-
 }
 
-header nav ul li a{
-text-decoration: none;
-color : #F0E3CA;
-
+header nav ul li a {
+    text-decoration: none;
+    color: #F0E3CA;
 }
 
-/*-------------------------------------------------- Index File--------------------------------------------------*/
 
-/*------------------------- Body -------------------------*/
-body{
+/*-------------------------------------------------- Index File --------------------------------------------------*/
+
+
+/*-------------------------------------------------- Body --------------------------------------------------*/
+
+body {
     font-family: Georgia;
     background-color: #F0E3CA;
     position: static;
@@ -62,58 +58,88 @@ body{
 
 
 /*-------------------------------------------------- Main --------------------------------------------------*/
+
+
 /*------------------------- Introduction PART -------------------------*/
-#Introduction{
+
+#Introduction {
     margin-top: 50px;
     display: inline-block;
     position: relative;
 }
 
-#Introduction img{
-    margin-top: 10px; 
+#Introduction img {
+    margin-top: 10px;
     margin-left: 100px;
     width: 550px;
     height: 300;
     border-radius: 15px;
-    
 }
 
-#Introduction h1{
+#Introduction h1 {
     margin-top: 90px;
     margin-left: 100px;
     font-family: 'Contrail One', cursive;
     font-size: 35px;
 }
-#Introduction p{
+
+#Introduction p {
     font-family: Georgia;
     margin-left: 100px;
     font-size: 25px;
-    
 }
+
 
 /*------------------------- Products PART -------------------------*/
-#Products{
+
+#Products {
     display: block;
-    
-}
-#Products h1{
-    position: absolute;
-    font-family: 'Contrail One', cursive;
-    font-size: 55px;
-    top:420px;
-    left: 1420px;
 }
 
-.Pictures{
+.Pictures {
     position: absolute;
-    top:150px;
+    top: 150px;
     left: 800px;
     border-radius: 3px;
 }
 
-/*-------------------------------------------------- Articles --------------------------------------------------*/
+#Products h1 {
+    position: absolute;
+    font-family: 'Contrail One', cursive;
+    font-size: 55px;
+    top: 420px;
+    left: 1420px;
+}
 
-#Informations{
+
+/*-------------------------------------------------- Informations --------------------------------------------------*/
+
+
+/*------------------------- Working Hours Information -------------------------*/
+
+#workingHours {
+    display: inline-block;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+#workingHours h1 {
+    font-family: 'Contrail One', cursive;
+    font-size: 30px;
+    color: #343F56;
+}
+
+#workingHours p {
+    font-family: 'Contrail One', cursive;
+    color: #F54748;
+}
+
+
+/*------------------------- Contact Card -------------------------*/
+
+#Informations {
     background-color: #FF8303;
     background-size: cover;
     margin-top: 100px;
@@ -122,12 +148,7 @@ body{
     height: 250px;
 }
 
-
-#ContactCard h1{
-    font-size: 30px;
-    font-family: 'Contrail One', cursive;
-    }
-#ContactCard{
+#ContactCard {
     display: block;
     position: absolute;
     margin-top: 100px;
@@ -136,105 +157,104 @@ body{
     font-size: 20px;
 }
 
-
-#ContactCard a{
-    text-decoration: none;
-}
-
-
-/*------------------------- Working Hours Information -------------------------*/
-
-#workingHours h1{
-    font-family: 'Contrail One', cursive;
+#ContactCard h1 {
     font-size: 30px;
-}
-
-
-#workingHours{
-    display: inline-block;
-    position: relative;
-    margin-top: 40px;
-    margin-left: 50px;
-    font-size: 20px;
-}
-
-
-#workingHours p{
     font-family: 'Contrail One', cursive;
-
-
+    color: #343F56;
 }
+
+#ContactCard h3 {
+    font-size: 30px;
+    font-family: 'Contrail One', cursive;
+    color: #F54748;
+}
+
+#ContactCard a {
+    text-decoration: none;
+    color: #F54748;
+    font-weight: bolder;
+}
+
+
 /*------------------------- Location Information -------------------------*/
-#LocationInformations{
+
+#LocationInformations {
     float: right;
     margin: 0 10px;
 }
 
-#LocationInformations h1{
-     font-size: 30px;
-     text-align: left;
-     font-weight: bold;
-     font-size: 20px;
-
-}
-
-#LocationInformations p{
+#LocationInformations h1 {
     font-family: 'Contrail One', cursive;
-
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: #343F56;
 }
 
-#map{
+#LocationInformations p {
+    font-family: 'Contrail One', cursive;
+}
 
+#map {
     position: relative;
-    text-align:right;
+    text-align: right;
     margin-top: -40px;
-
-
-
 }
-
 
 
 /*-------------------------------------------------- Sales --------------------------------------------------*/
 
 
-table{
+/*------------------------- Form -------------------------*/
 
-border: solid 1px black;
-font-size: 25px;
-margin-top: 10px;
-margin-left: 50px;
-}
-th{
-font-weight: Bold;
-border-right: solid 1px black;
-padding: 10px;
-}
-tr{
-    border-bottom:solid 1px black;
-}
-td{
-  border-right: solid 1px black;  
-  text-align: center;
-}
-
-fieldset {
+#form fieldset {
     border: solid black 1px;
     display: block;
-    margin: 50px 50px 50px 50px ;
+    margin: 50px 50px 50px 50px;
     font-size: 20px;
-    padding: 10px 20px 20px 50px;    
-
+    padding: 10px 20px 20px 50px;
 }
 
-#fieldset label {
-    
-
+#form fieldset legend {
+    font-family: 'Contrail One', cursive;
+    color: #FF8303;
 }
 
-#fieldset input {
-    
+#form fieldset label {
+    font-family: 'Contrail One', cursive;
+    color: crimson;
 }
-#fieldset button {
-    
+
+#fieldset input {}
+
+#fieldset button {}
+
+
+/*------------------------- Table -------------------------*/
+
+table {
+    border: solid 1px black;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 50px;
+    background-color: #FB9300;
+}
+
+th {
+    font-family: 'Contrail One', cursive;
+    font-weight: Bold;
+    border-right: solid 1px black;
+    padding: 10px;
+    color: darkred;
+}
+
+tr {
+    border-bottom: solid 1px black;
+}
+
+td {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-right: solid 1px black;
+    text-align: center;
 }
